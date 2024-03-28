@@ -65,6 +65,7 @@ class CreatePersonalInformation extends Component
 
         $this->validate();
         $dateOfBirth = Carbon::createFromFormat('Y-m-d', $this->dobYear . '-' . $this->dobMonth . '-' . $this->dobDay);
+        $dateOfMarriage = null;
         if(!$this->married){
             if($this->marriageDay != null && $this->marriageMonth != null && $this->marriageYear != null ){
                 $dateOfMarriage = Carbon::createFromFormat('Y-m-d', $this->marriageYear . '-' . $this->marriageMonth . '-' . $this->marriageDay);
